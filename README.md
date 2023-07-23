@@ -1,4 +1,3 @@
-```markdown
 # Loading Plus
 
 Loading Plus is a Flutter package that simplifies the process of adding loading dialogs and loading widgets to your Flutter applications. Loading indicators are essential UI components that enhance user experience by indicating ongoing processes or data retrieval.
