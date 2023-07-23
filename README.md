@@ -78,7 +78,7 @@ For a complete example of how to use Loading Plus, check out the `example/` fold
 
 ## Contribution
 
-Contributions to Loading Plus are welcome! If you encounter any issues, have suggestions, or want to improve the package, please feel free to create a pull request or submit an issue on the [GitHub repository](https://github.com/yourusername/loading_plus).
+Contributions to Loading Plus are welcome! If you encounter any issues, have suggestions, or want to improve the package, please feel free to create a pull request or submit an issue on the [GitHub repository](https://github.com/OsamaAssaf/loading_plus).
 
 ## License
 
@@ -90,8 +90,4 @@ This package is created to simplify the process of adding loading indicators to 
 
 ## Credits
 
-This package is created and maintained by [Your Name](https://github.com/yourusername).
-
-```
-
-Make sure to replace `[yourusername]` with your GitHub username and update other relevant sections to match the specifics of your package. The README provides detailed instructions on how to get started with the package, its features, usage examples, and contribution guidelines.
+This package is created and maintained by [Osama Assaf](https://github.com/OsamaAssaf).
