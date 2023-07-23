@@ -1,7 +1,7 @@
 name: loading_plus
 description: This package is to help you with add loadings to your app in simple way.
 version: 1.0.0
-homepage: https://github.com/OsamaAssaf/Flutter-Loading.git
+homepage: https://github.com/OsamaAssaf/loading_plus.git
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
