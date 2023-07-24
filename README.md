@@ -65,11 +65,11 @@ class MyApp extends StatelessWidget {
 LoadingPlus.instance.show();
 
 // Show a custom loading dialog
-LoadingPlus.instance.showCustom(
-child: const Center(
-child: Text('Loading...'),
-),
-);
+  LoadingPlus.instance.showCustom(
+    child: const Center(
+      child: Text('Loading...'),
+    ),
+  );
 
 // Show a loading dialog with an asset image
 LoadingPlus.instance.showAssetImage(image: 'assets/loading.gif');
@@ -84,9 +84,9 @@ LoadingPlus.instance.dismiss();
 LoadingPlus.instance.loadingWidget();
 
 // Show a custom loading widget
-LoadingPlus.instance.loadingWidgetCustom(
-child: const Text('Loading...'),
-);
+  LoadingPlus.instance.loadingWidgetCustom(
+    child: const Text('Loading...'),
+  );
 ```
 
 ## Example
