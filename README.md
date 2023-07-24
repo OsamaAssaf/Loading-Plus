@@ -49,9 +49,9 @@ LoadingPlus.instance.show();
 
 // Show a custom loading dialog
 LoadingPlus.instance.showCustom(
-  child: const Center(
-    child: Text('Loading...'),
-  ),
+child: const Center(
+child: Text('Loading...'),
+),
 );
 
 // Show a loading dialog with an asset image
@@ -68,13 +68,13 @@ LoadingPlus.instance.loadingWidget();
 
 // Show a custom loading widget
 LoadingPlus.instance.loadingWidgetCustom(
-  child: const Text('Loading...'),
+child: const Text('Loading...'),
 );
 ```
 
 ## Example
 
-For a complete example of how to use Loading Plus, check out the `example/` folder in the repository.
+For a complete example of how to use Loading Plus, check out the [EXAMPLE](https://github.com/OsamaAssaf/loading_plus_example) folder in the repository.
 
 ## Contribution
 
