@@ -5,7 +5,7 @@ All notable changes to the "Loading Plus" package will be documented in this fil
 ## 1.3.0
 
 ### Updated
-- Update README.md file by adding a step on it.
+- Update README.md file by adding one step on it.
 
 ## 1.2.0
 
