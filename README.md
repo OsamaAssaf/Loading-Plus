@@ -40,8 +40,25 @@ void main() {
   runApp(const MyApp());
 }
 ```
+3. **Initialize Material App**: Assigning the global navigator key to the MaterialApp:
 
-3. **Usage**: Now you can use the Loading Plus package to show loading dialogs and loading widgets anywhere in your app. For example:
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Loading Example',
+      navigatorKey:
+          navigatorKey, // Assigning the global navigator key to the MaterialApp
+      home: const HomePage(),
+    );
+  }
+}
+``` 
+
+4. **Usage**: Now you can use the Loading Plus package to show loading dialogs and loading widgets anywhere in your app. For example:
 
 ```dart
 // Show a default loading dialog
