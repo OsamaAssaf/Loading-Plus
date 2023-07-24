@@ -74,7 +74,7 @@ LoadingPlus.instance.loadingWidgetCustom(
 
 ## Example
 
-For a complete example of how to use Loading Plus, check out the [[GitHub repository](https://github.com/OsamaAssaf/loading_plus)](https://github.com/OsamaAssaf/loading_plus_example) folder in the repository.
+For a complete example of how to use Loading Plus, check out the [[EXAMPLE](https://github.com/OsamaAssaf/loading_plus_example)] folder in the repository.
 
 ## Contribution
 
