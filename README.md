@@ -74,7 +74,7 @@ child: const Text('Loading...'),
 
 ## Example
 
-For a complete example of how to use Loading Plus, check out the [EXAMPLE](example) folder in the repository.
+For a complete example of how to use Loading Plus, check out the [example](example) folder in the repository.
 
 ## Contribution
 
