@@ -2,6 +2,11 @@
 
 All notable changes to the "Loading Plus" package will be documented in this file.
 
+## 1.3.1
+
+### Updated
+- Use canPop instead of willPopScope.
+
 ## 1.3.0
 
 ### Updated
