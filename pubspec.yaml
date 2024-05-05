@@ -1,6 +1,6 @@
 name: loading_plus
 description: This package is to help you with add loadings to your app in simple way.
-version: 1.3.0
+version: 1.3.1
 homepage: https://github.com/OsamaAssaf/loading_plus.git
 
 environment:
@@ -14,6 +14,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 flutter:

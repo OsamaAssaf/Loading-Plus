@@ -24,7 +24,7 @@ Follow these simple steps to get started with Loading Plus:
 
 ```yaml
 dependencies:
-  loading_plus: ^1.0.0
+  loading_plus: ^1.3.1
 ```
 
 2. **Initialize the Package**: In your `main.dart` file, create a global key for the NavigatorState and initialize the Loading Plus package with it:

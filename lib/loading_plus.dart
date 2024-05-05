@@ -28,7 +28,8 @@ class LoadingPlus {
   void show({
     Color? color,
     bool barrierDismissible = false,
-    bool willPopScope = false,
+    @Deprecated('willPopScope is deprecated use canPop instead') bool willPopScope = false,
+    bool canPop = false,
     ImageFilter? backdropFilter,
   }) {
     // Check if the navigator key is set
@@ -44,8 +45,8 @@ class LoadingPlus {
       barrierDismissible: barrierDismissible,
       builder: (_) {
         // Wrap the dialog in a WillPopScope to handle back button presses
-        return WillPopScope(
-          onWillPop: () async => willPopScope,
+        return PopScope(
+          canPop: canPop,
           child: BackdropFilter(
             filter: backdropFilter!,
             child: Center(
@@ -66,7 +67,8 @@ class LoadingPlus {
     double width = 24.0,
     double height = 24.0,
     bool barrierDismissible = false,
-    bool willPopScope = false,
+    @Deprecated('willPopScope is deprecated use canPop instead') bool willPopScope = false,
+    bool canPop = false,
     ImageFilter? backdropFilter,
   }) {
     // Check if the navigator key is set
@@ -82,8 +84,8 @@ class LoadingPlus {
       barrierDismissible: barrierDismissible,
       builder: (_) {
         // Wrap the dialog in a WillPopScope to handle back button presses
-        return WillPopScope(
-          onWillPop: () async => willPopScope,
+        return PopScope(
+          canPop: canPop,
           child: BackdropFilter(
             filter: backdropFilter!,
             child: Center(
@@ -106,7 +108,8 @@ class LoadingPlus {
     double width = 24.0,
     double height = 24.0,
     bool barrierDismissible = false,
-    bool willPopScope = false,
+    @Deprecated('willPopScope is deprecated use canPop instead') bool willPopScope = false,
+    bool canPop = false,
     ImageFilter? backdropFilter,
   }) {
     // Check if the navigator key is set
@@ -122,8 +125,8 @@ class LoadingPlus {
       barrierDismissible: barrierDismissible,
       builder: (_) {
         // Wrap the dialog in a WillPopScope to handle back button presses
-        return WillPopScope(
-          onWillPop: () async => willPopScope,
+        return PopScope(
+          canPop: canPop,
           child: BackdropFilter(
             filter: backdropFilter!,
             child: Center(
@@ -144,7 +147,8 @@ class LoadingPlus {
   void showCustom({
     required Widget child,
     bool barrierDismissible = false,
-    bool willPopScope = false,
+    @Deprecated('willPopScope is deprecated use canPop instead') bool willPopScope = false,
+    bool canPop = false,
   }) {
     // Check if the navigator key is set
     if (_key == null) {
@@ -157,8 +161,8 @@ class LoadingPlus {
       barrierDismissible: barrierDismissible,
       builder: (_) {
         // Wrap the dialog in a WillPopScope to handle back button presses
-        return WillPopScope(
-          onWillPop: () async => willPopScope,
+        return PopScope(
+          canPop: canPop,
           child: child,
         );
       },
