@@ -2,6 +2,11 @@
 
 All notable changes to the "Loading Plus" package will be documented in this file.
 
+## 2.0.1
+
+### Updated
+- Enhance code format.
+
 ## 2.0.0
 
 ### Updated
