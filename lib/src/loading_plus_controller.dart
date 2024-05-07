@@ -1,5 +1,5 @@
-import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:flutter/material.dart';
+import 'package:back_button_interceptor/back_button_interceptor.dart';
 
 class LoadingPlusController {
   LoadingPlusController._(); // Private constructor to prevent instantiation
