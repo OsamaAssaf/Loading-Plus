@@ -65,11 +65,11 @@ LoadingPlus(
   LoadingPlusWidget()
 
 // Use custom loading widget
-    LoadingPlusWidget(
-      child: Center(
-          child: Text('Loading...'),
-        ),
-    );
+  LoadingPlusWidget(
+  child: Center(
+      child: Text('Loading...'),
+    ),
+  );
 ```
 
 ## Example
