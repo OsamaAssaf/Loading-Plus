@@ -5,6 +5,11 @@ All notable changes to the "Loading Plus" package will be documented in this fil
 ## 2.0.1
 
 ### Updated
+- Update README.md file.
+
+## 2.0.1
+
+### Updated
 - Enhance code format.
 
 ## 2.0.0

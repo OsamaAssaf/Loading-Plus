@@ -1,6 +1,6 @@
 name: loading_plus
 description: This package is to help you with add loadings to your app in simple way.
-version: 2.0.1
+version: 2.0.2
 homepage: https://github.com/OsamaAssaf/loading_plus.git
 
 environment:

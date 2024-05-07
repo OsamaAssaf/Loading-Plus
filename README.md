@@ -26,7 +26,7 @@ To use Loading Plus, add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  loading_plus: ^2.0.1
+  loading_plus: ^2.0.2
 ```
 
 Then, import the package in your Dart code:
