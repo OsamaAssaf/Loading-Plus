@@ -47,8 +47,8 @@ LoadingPlus(
 Custom Loading Overlay Widget
 ```dart
 LoadingPlus(
-child: YourMainWidget(),
-loadingWidget: YourCustomLoadingWidget(),
+  child: YourMainWidget(),
+  loadingWidget: YourCustomLoadingWidget(),
 )
 ```
 
