@@ -37,9 +37,12 @@ import 'package:loading_plus/loading_plus.dart';
 
 2. **Initialize**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
 
-Android 13: To make it work on Android 13 and up, set this to false in the AndroidManifest.xml inside MainActivity block:
-```
-android:enableOnBackInvokedCallback="false"
+Android 13 Compatibility: To make it work on Android 13 and up, set `android:enableOnBackInvokedCallback="false"` in the `AndroidManifest.xml` inside the `MainActivity` block:
+
+```xml
+<activity
+    android:name=".MainActivity"
+    android:enableOnBackInvokedCallback="false">
 ```
 
 Default Loading Overlay
