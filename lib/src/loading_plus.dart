@@ -73,7 +73,8 @@ class LoadingPlus extends StatelessWidget {
                     child: loadingWidget ??
                         CircularProgressIndicator.adaptive(
                           valueColor: LoadingPlusController().color != null
-                              ? AlwaysStoppedAnimation<Color>(LoadingPlusController().color!)
+                              ? AlwaysStoppedAnimation<Color>(
+                                  LoadingPlusController().color!)
                               : null, // Apply custom color if provided
                         ),
                   ),

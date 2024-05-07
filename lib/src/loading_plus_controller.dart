@@ -49,7 +49,10 @@ class LoadingPlusController {
   void handleBackButtonInterceptor(bool value) {
     const String interceptorName = 'LoadingBackButton';
     if (value) {
-      if (canPop) return; // If canPop is true, return without adding interceptor
+      if (canPop) {
+        // If canPop is true, return without adding interceptor
+        return;
+      }
       BackButtonInterceptor.add(
         _interceptorFunction, // Add the interceptor function
         name: interceptorName, // Specify the interceptor name

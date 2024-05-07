@@ -32,8 +32,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Future<void> fetchData() async {
     LoadingPlusController().show(); // Show the default loading
-    await Future.delayed(const Duration(seconds: 3)); // Simulate a time-consuming process
-    LoadingPlusController().dismiss(); // Hide the loading when the process is complete
+    await Future.delayed(
+        const Duration(seconds: 3)); // Simulate a time-consuming process
+    LoadingPlusController()
+        .dismiss(); // Hide the loading when the process is complete
   }
 
   @override
@@ -53,7 +55,8 @@ class _HomePageState extends State<HomePage> {
             ), // Button to trigger the fetchData function
             FilledButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LoadingPage()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const LoadingPage()));
               },
               child: const Text('Go to loading page'),
             ), // Button to navigate to the LoadingPage
