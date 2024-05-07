@@ -37,9 +37,18 @@ import 'package:loading_plus/loading_plus.dart';
 
 2. **Usage**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
 
+Default Loading Overlay
 ```dart
 LoadingPlus(
   child: YourMainWidget(),
+)
+```
+
+Custom Loading Overlay Widget
+```dart
+LoadingPlus(
+child: YourMainWidget(),
+loadingWidget: YourCustomLoadingWidget(),
 )
 ```
 
