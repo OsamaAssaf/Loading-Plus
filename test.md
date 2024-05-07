@@ -35,36 +35,13 @@ Then, import the package in your Dart code:
 import 'package:loading_plus/loading_plus.dart';
 ```
 
-2. **Initialize the Package**: In your `main.dart` file, create a global key for the NavigatorState and initialize the Loading Plus package with it:
+2. **Usage**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
 
 ```dart
-import 'package:flutter/material.dart';
-import 'package:loading_plus/loading_plus.dart';
-
-final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
-void main() {
-  LoadingPlus.instance.init(navigatorKey);
-  runApp(const MyApp());
-}
+LoadingPlus(
+  child: YourMainWidget(),
+)
 ```
-3. **Initialize Material App**: Assigning the global navigator key to the MaterialApp:
-
-```dart
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Loading Example',
-      navigatorKey:
-          navigatorKey, // Assigning the global navigator key to the MaterialApp
-      home: const HomePage(),
-    );
-  }
-}
-``` 
 
 4. **Usage**: Now you can use the Loading Plus package to show loading dialogs and loading widgets anywhere in your app. For example:
 
