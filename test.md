@@ -35,7 +35,7 @@ Then, import the package in your Dart code:
 import 'package:loading_plus/loading_plus.dart';
 ```
 
-2. **Usage**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
+2. **Initialize**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
 
 Default Loading Overlay
 ```dart
@@ -52,38 +52,50 @@ loadingWidget: YourCustomLoadingWidget(),
 )
 ```
 
-4. **Usage**: Now you can use the Loading Plus package to show loading dialogs and loading widgets anywhere in your app. For example:
+3**Usage**: Now you can use the Loading Plus package to show loading overlays and loading widgets anywhere in your app. For example:
 
 ```dart
-// Show a default loading dialog
-LoadingPlus.instance.show();
+// Show the loading overlay
+  LoadingPlusController().show();
 
-// Show a custom loading dialog
-  LoadingPlus.instance.showCustom(
-    child: const Center(
-      child: Text('Loading...'),
-    ),
-  );
+// Dismiss the loading overlay
+  LoadingPlusController().dismiss();
 
-// Show a loading dialog with an asset image
-LoadingPlus.instance.showAssetImage(image: 'assets/loading.gif');
+// Use default loading widget
+  LoadingPlusWidget()
 
-// Show a loading dialog with a network image
-LoadingPlus.instance.showNetworkImage(image: 'https://example.com/loading.gif');
-
-// Dismiss the loading dialog when the process is complete
-LoadingPlus.instance.dismiss();
-
-// Show a default loading widget
-LoadingPlus.instance.loadingWidget();
-
-// Show a custom loading widget
-  LoadingPlus.instance.loadingWidgetCustom(
-    child: const Text('Loading...'),
-  );
+// Use custom loading widget
+    LoadingPlusWidget(
+      child: Center(
+          child: Text('Loading...'),
+        ),
+    );
 ```
 
 ## Example
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:loading_plus/loading_plus.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Loading Plus Demo',
+      home: LoadingPlus(
+        child: YourMainWidget(),
+      ),
+    );
+  }
+}
+```
 
 For a complete example of how to use Loading Plus, check out the [example](example) folder in the repository.
 
