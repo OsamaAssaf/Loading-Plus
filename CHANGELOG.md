@@ -2,10 +2,11 @@
 
 All notable changes to the "Loading Plus" package will be documented in this file.
 
-## 1.3.1
+## 2.0.0
 
 ### Updated
-- Use canPop instead of willPopScope.
+- Change the concept at all.
+- Make the loading not depends on the navigator. 
 
 ## 1.3.0
 
