@@ -1,18 +1,18 @@
 # Loading Plus
 
-Loading Plus is a Flutter package that simplifies the process of adding loading dialogs and loading widgets to your Flutter applications. Loading indicators are essential UI components that enhance user experience by indicating ongoing processes or data retrieval.
+Loading Plus is a Flutter package that simplifies the process of adding loading overlays and loading widgets to your Flutter applications. Loading indicators are essential UI components that enhance user experience by indicating ongoing processes or data retrieval.
 
 ## Features
 
 - **Easy Integration**: Loading Plus offers a straightforward integration process. With just a few lines of code, developers can quickly add loading indicators to their apps without the need for extensive manual setup.
 
-- **Customizable Loading Dialogs**: The package provides pre-designed loading dialogs that can be easily customized to match the app's theme and branding. Developers can adjust the appearance, color, size, and animation of the loading dialogs to create a seamless user experience.
+- **Customizable Loading**: The package provides pre-designed loading overlays that can be easily customized to match the app's theme and branding. Developers can adjust the appearance, color, size, and animation of the loading overlays to create a seamless user experience.
 
-- **Multiple Loading Widgets**: Loading Plus offers a variety of loading widgets, each with its unique animation style. This variety allows developers to choose the loading indicator that best fits their application's context, enhancing visual appeal and usability.
-
-- **Flexibility and Control**: The package offers developers the flexibility to control when and where loading indicators appear. They can easily trigger loading dialogs during data fetches, API calls, or any other asynchronous processes, ensuring users stay informed about ongoing actions.
+- **Flexibility and Control**: The package offers developers the flexibility to control when and where loading indicators appear. They can easily trigger loading overlays during data fetches, API calls, or any other asynchronous processes, ensuring users stay informed about ongoing actions.
 
 - **Smooth Animations**: Loading Plus ensures that loading animations are smooth and responsive, providing users with a visually pleasing experience while they wait for content or processes to load.
+ 
+- **Prevent Back Button**: Prevent back button presses while the loading overlay is shown.
 
 - **Documentation and Examples**: To assist developers in using the package effectively, comprehensive documentation and examples are provided. This helps reduce the learning curve and enables developers to implement the loading indicators with ease.
 
@@ -20,76 +20,82 @@ Loading Plus is a Flutter package that simplifies the process of adding loading 
 
 Follow these simple steps to get started with Loading Plus:
 
-1. **Installation**: Add the following dependency to your `pubspec.yaml` file:
+1. **Installation**: Add the following:
+
+To use Loading Plus, add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  loading_plus: ^1.3.1
+  loading_plus: ^2.0.0
 ```
 
-2. **Initialize the Package**: In your `main.dart` file, create a global key for the NavigatorState and initialize the Loading Plus package with it:
+Then, import the package in your Dart code:
+
+```dart
+import 'package:loading_plus/loading_plus.dart';
+```
+
+2. **Initialize**: To use the loading overlay, wrap your main widget with LoadingPlus and provide the main content as a child:
+
+Default Loading Overlay
+```dart
+LoadingPlus(
+  child: YourMainWidget(),
+)
+```
+
+Custom Loading Overlay Widget
+```dart
+LoadingPlus(
+  child: YourMainWidget(),
+  loadingWidget: YourCustomLoadingWidget(),
+)
+```
+
+3**Usage**: Now you can use the Loading Plus package to show loading overlays and loading widgets anywhere in your app. For example:
+
+```dart
+// Show the loading overlay
+  LoadingPlusController().show();
+
+// Dismiss the loading overlay
+  LoadingPlusController().dismiss();
+
+// Use default loading widget
+  LoadingPlusWidget()
+
+// Use custom loading widget
+  LoadingPlusWidget(
+  child: Center(
+      child: Text('Loading...'),
+    ),
+  );
+```
+
+## Example
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:loading_plus/loading_plus.dart';
 
-final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
 void main() {
-  LoadingPlus.instance.init(navigatorKey);
   runApp(const MyApp());
 }
-```
-3. **Initialize Material App**: Assigning the global navigator key to the MaterialApp:
 
-```dart
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Loading Example',
-      navigatorKey:
-          navigatorKey, // Assigning the global navigator key to the MaterialApp
-      home: const HomePage(),
+    return const MaterialApp(
+      title: 'Loading Plus Demo',
+      home: LoadingPlus(
+        child: YourMainWidget(),
+      ),
     );
   }
 }
-``` 
-
-4. **Usage**: Now you can use the Loading Plus package to show loading dialogs and loading widgets anywhere in your app. For example:
-
-```dart
-// Show a default loading dialog
-LoadingPlus.instance.show();
-
-// Show a custom loading dialog
-  LoadingPlus.instance.showCustom(
-    child: const Center(
-      child: Text('Loading...'),
-    ),
-  );
-
-// Show a loading dialog with an asset image
-LoadingPlus.instance.showAssetImage(image: 'assets/loading.gif');
-
-// Show a loading dialog with a network image
-LoadingPlus.instance.showNetworkImage(image: 'https://example.com/loading.gif');
-
-// Dismiss the loading dialog when the process is complete
-LoadingPlus.instance.dismiss();
-
-// Show a default loading widget
-LoadingPlus.instance.loadingWidget();
-
-// Show a custom loading widget
-  LoadingPlus.instance.loadingWidgetCustom(
-    child: const Text('Loading...'),
-  );
 ```
-
-## Example
 
 For a complete example of how to use Loading Plus, check out the [example](example) folder in the repository.
 
